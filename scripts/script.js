@@ -37,9 +37,3 @@ for(let i=0; i<projects.length; i++) {
         content[i].style.animation = `projectContentSlideOut 0.5s ease forwards`;
     });
 }
-
-const name = document.querySelectorAll('#svg-name path');
-
-for(let i=0;i<name.length;i++){
-    console.log(`Letter ${i} is ${name[i].getTotalLength()}`);
-}
