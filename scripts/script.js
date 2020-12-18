@@ -59,11 +59,11 @@ for(let i=0; i<projectThree.length; i++) {
     });
 }
 
-//Grabbing letters in name
+//Grabbing First letters in name
 const alternateLetter = document.querySelectorAll('.alternateLetter');
 const mainLetter = document.querySelectorAll('.mainLetter');
 
-//looping to add animation to main letter
+//looping to add animation to First letters
 for(let i=0; i<alternateLetter.length; i++) {
     alternateLetter[i].addEventListener('mouseenter', () => {
         alternateLetter[i].style.animation = `alternateLetterAnimationIn 0.5s forwards`;
@@ -72,5 +72,18 @@ for(let i=0; i<alternateLetter.length; i++) {
     alternateLetter[i].addEventListener('mouseleave', () => {
         alternateLetter[i].style.animation = `alternateLetterAnimationOut 0.5s`;
         mainLetter[i].style.animation = `mainLetterAnimationOut 0.5s`;
+    });
+}
+
+//Grabbing other letters in name
+const letter = document.querySelectorAll('.letter');
+
+//looping to add animation to letters
+for(let i=0; i<letter.length; i++) {
+    letter[i].addEventListener('mouseenter', () => {
+        letter[i].style.animation = `shake 0.5s cubic-bezier(.36,.07,.19,.97) both`;
+    });
+    letter[i].addEventListener('mouseleave', () => {
+        letter[i].style.animation = `shake2 0.5s cubic-bezier(.36,.07,.19,.97) both`;
     });
 }

@@ -35,7 +35,7 @@
                     <nav class="stroke">
                         <ul>
                             <li><a href="index.php">Home</a></li>
-                            <li><a href="index.php">Projects</a></li>
+                            <li><a href="#project-start">Projects</a></li>
                             <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTNHjkMDTvrxqNQPVXDRKVhQjfBVHpVtCbhTqgtbPJkGFBQhfCMqtwmMTjJlgcBXLXgpLV">Contact</a></li>
                         </ul>
                     </nav>
@@ -73,7 +73,7 @@
                     </div>
                 </div>
                 <p>Designer, Full Stack Developer & Lover of all things chocolate flavored.</p>
-                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTNHjkMDTvrxqNQPVXDRKVhQjfBVHpVtCbhTqgtbPJkGFBQhfCMqtwmMTjJlgcBXLXgpLV" target="_blank" class="button button1"><span>Get in Touch </span></a>
+                <a href="media/TylerSharara-Resume.pdf" download class="button button1"><span>Resume </span></a>
             </div>
         </div>
 
@@ -86,23 +86,33 @@
                 <div class="about-btn-container">
                     <a type="button" href="https://www.linkedin.com/in/tyler-sharara-40485268/" class="project-btn">LinkedIn</a>
                     <a type="button" href="https://github.com/TylerSharara" class="project-btn">Github</a>
+                    <!--
+                    <div class="vertical-divider"></div>
+                    <a type="button" href="media/TylerSharara-Resume.pdf" download class="project-btn">Resume</a>
+                    -->
                 </div>
             </div>
             <img src="media/Tyler-Avatar.webp" id="avatar" alt="Tyler Sharara Avatar">
         </div>
-        <br><br><br>
+        <br><br><br><br><br>
 
         <!-- Projects start here -->
+        <div class="project-header">
+            <div class="horizontal-divider"></div>
+            <h1 id="project-start" class="project-start">Projects</h1>
+            <div class="horizontal-divider"></div>
+        </div>
+        <br><br>
         <div class="project-outer fade-in">
             <h1 class="num-left">01</h1>
             <div class="project-inner fade-in">
                 <div class="project-div project-one">
                     <h1 class="project-name" id="project-name-one">Every Detail Cleaning</h1>
                     <div class="project-content-right project-content-one">
-                        <p>Every Detail Cleaning is a mock cleaning service business. This is a simple one page website hand written in HTML, CSS, JavaScript and PHP.</p>
+                        <p>Every Detail Cleaning is a mock cleaning service business. This is a simple one page website written in HTML, CSS, JavaScript and PHP.</p>
                         <div class="btn-container">
                             <a type="button" href="https://deargodpleasework.herokuapp.com/" class="project-btn">See It Live!</a>
-                            <a type="button" href="https://deargodpleasework.herokuapp.com/" class="project-btn">See The Code!</a>
+                            <a type="button" href="https://github.com/TylerSharara/EveryDetail" class="project-btn">See The Code!</a>
                         </div>
                     </div>
                 </div>
@@ -115,10 +125,10 @@
                 <div class="project-div project-two">
                     <h1 class="project-name" id="project-name-two">PoopNinja Waste Removal</h1>
                     <div class="project-content-left project-content-two">
-                        <p> PoopNinja is a local pet waste management service. This website is a React application with a NodeJS backend.</p>
+                        <p> PoopNinja is a local pet waste management service. This website was built with create-react-app and a NodeJS backend.</p>
                         <div class="btn-container">
                             <a type="button" href="https://deargodpleasework.herokuapp.com/" class="project-btn">See It Live!</a>
-                            <a type="button" href="https://deargodpleasework.herokuapp.com/" class="project-btn">See The Code!</a>
+                            <a type="button" href="https://github.com/TylerSharara/poopninja-final" class="project-btn">See The Code!</a>
                         </div>
                     </div>
                 </div>
@@ -139,7 +149,18 @@
                 </div>
             </div>
         </div>
-        <br><br><br><br><br><br><br><br><br>
+        <div class="call-to-action-container">
+            <div class="call-to-action">
+                <h1 id="project-start" class="project-start">Need a Website or Looking to Hire?</h1>
+                <br>
+                <div class="horizontal-divider-full"></div>
+                <br><br>
+                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTNHjkMDTvrxqNQPVXDRKVhQjfBVHpVtCbhTqgtbPJkGFBQhfCMqtwmMTjJlgcBXLXgpLV" target="_blank" class="button button1"><span>Get in Touch </span></a>
+            </div>
+        </div>
     </body>
+    <footer>
+
+    </footer>
     <script src="scripts/script.js"></script>
 </html>

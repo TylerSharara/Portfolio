@@ -5,8 +5,9 @@
  font-family: 'Krub', sans-serif;
 */
 
-root {
+:root {
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -23,7 +24,14 @@ header {
     height: 75px;
 }
 
+body {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
 html {
+    max-width: 100vw;
+    overflow-x: hidden;
     background-color: #151515;
 }
 
@@ -38,6 +46,7 @@ nav > ul {
 nav > ul > li {
     display: inline-block;
     font-family: 'Nunito', sans-serif;
+    font-size: 18px;
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 5px;
@@ -170,6 +179,7 @@ span.space {
     margin:0 1px;
 }
 
+/*
 span.letter:nth-child(even):hover {
     animation: shake 0.85s cubic-bezier(.36,.07,.19,.97) both;
 }
@@ -177,6 +187,7 @@ span.letter:nth-child(even):hover {
 span.letter:nth-child(odd):hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
 }
+ */
 
 .alternateLetter{
     position: absolute;
@@ -286,7 +297,10 @@ span.letter:nth-child(odd):hover {
 .about-content {
     width: 45%;
     height: 100%;
-    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
 }
 
 .about-content h1 {
@@ -297,6 +311,7 @@ span.letter:nth-child(odd):hover {
 
 .about-content p {
     color: white;
+    text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: calc(1vw + 0.25rem);
 }
@@ -331,9 +346,46 @@ span.letter:nth-child(odd):hover {
     align-items: center;
 }
 
+.vertical-divider {
+    width: 3px;
+    height: 75px;
+    background-color: #BB86FC;
+}
+
+.horizontal-divider {
+    width: 250px;
+    height: 3px;
+    background: linear-gradient(-45deg, #14ffec, #BB86FC);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+    margin: 0 30px;
+}
+
+.horizontal-divider-full {
+    width: 70%;
+    height: 3px;
+    background-color: #BB86FC;
+    margin: 0 30px;
+}
+
 #avatar {
     width: 300px;
     height: 300px;
+}
+
+.project-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+.project-start {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    letter-spacing: 2px;
 }
 
 .project-outer {
@@ -500,6 +552,25 @@ span.letter:nth-child(odd):hover {
     overflow: visible;
 }
 
+.call-to-action-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+
+}
+
+.call-to-action {
+    position: absolute;
+    top: 10%;
+    z-index: 999;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #151515;
+}
+
 .fade-in {
     opacity: 0;
     transition: opacity 250ms ease-in;
@@ -510,12 +581,33 @@ span.letter:nth-child(odd):hover {
 }
 
 footer {
-    right: 0;
-    bottom: 0;
-    left: 0;
+    background: linear-gradient(-45deg, #14ffec, #BB86FC);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    font-family: 'Nunito', sans-serif;
     text-align: center;
     color: white;
-    padding-top: 75px;
+    overflow: hidden;
+}
+
+/* Scroll Bar -------------------------------*/
+
+body::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #14ffec;
+    border-radius: 3px;
 }
 
 @keyframes arrowBounce {
@@ -593,6 +685,24 @@ footer {
 }
 
 @keyframes shake {
+     10%, 90% {
+         transform: translate3d(-1px, 0, 0) rotate(7deg);
+     }
+
+     20%, 80% {
+         transform: translate3d(1px, 0, 0) rotate(-7deg);
+     }
+
+     30%, 50%, 70% {
+         transform: translate3d(-2px, 0, 0) rotate(7deg);
+     }
+
+     40%, 60% {
+         transform: translate3d(2px, 0, 0) rotate(-7deg);
+     }
+ }
+
+@keyframes shake2 {
     10%, 90% {
         transform: translate3d(-1px, 0, 0) rotate(7deg);
     }
@@ -654,6 +764,18 @@ footer {
         transform: translateX(0px) translateY(0px);
         filter: blur(0px);
         color: white;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
     }
 }
 
