@@ -22,18 +22,55 @@ const appearOnScroll  = new IntersectionObserver(function(entries, appearOnScrol
 faders.forEach(fader => {appearOnScroll.observe(fader);});
 
 //Grabbing Project Containers and their Content
-const projects = document.querySelectorAll('.project-inner');
-const overlay = document.querySelectorAll('.project-overlay');
-const content = document.querySelectorAll('.project-content');
+const projectOne = document.querySelectorAll('.project-one');
+const projectTwo = document.querySelectorAll('.project-two');
+const projectThree = document.querySelectorAll('.project-three');
+const projectContentOne = document.querySelectorAll('.project-content-one');
+const projectContentTwo = document.querySelectorAll('.project-content-two');
+const projectContentThree = document.querySelectorAll('.project-content-three');
 
-//Looping to add animations
-for(let i=0; i<projects.length; i++) {
-    projects[i].addEventListener('mouseenter', () => {
-        overlay[i].style.animation = `overlayFadeIn 0.5s ease forwards`;
-        content[i].style.animation = `projectContentSlideIn 0.5s ease forwards`;
+//Looping to add animations for project one
+for(let i=0; i<projectOne.length; i++) {
+    projectOne[i].addEventListener('mouseenter', () => {
+        projectContentOne[i].style.animation = `projectContentSlideIn 0.5s ease forwards`;
     });
-    projects[i].addEventListener('mouseleave', () => {
-        overlay[i].style.animation = `overlayFadeOut 0.5s ease forwards`;
-        content[i].style.animation = `projectContentSlideOut 0.5s ease forwards`;
+    projectOne[i].addEventListener('mouseleave', () => {
+        projectContentOne[i].style.animation = `projectContentSlideOut 0.5s ease forwards`;
+    });
+}
+
+//Looping to add animations for project two
+for(let i=0; i<projectTwo.length; i++) {
+    projectTwo[i].addEventListener('mouseenter', () => {
+        projectContentTwo[i].style.animation = `projectContentSlideIn2 0.5s ease forwards`;
+    });
+    projectTwo[i].addEventListener('mouseleave', () => {
+        projectContentTwo[i].style.animation = `projectContentSlideOut2 0.5s ease forwards`;
+    });
+}
+
+//Looping to add animations for project three
+for(let i=0; i<projectThree.length; i++) {
+    projectThree[i].addEventListener('mouseenter', () => {
+        projectContentThree[i].style.animation = `projectContentSlideIn 0.5s ease forwards`;
+    });
+    projectThree[i].addEventListener('mouseleave', () => {
+        projectContentThree[i].style.animation = `projectContentSlideOut 0.5s ease forwards`;
+    });
+}
+
+//Grabbing letters in name
+const alternateLetter = document.querySelectorAll('.alternateLetter');
+const mainLetter = document.querySelectorAll('.mainLetter');
+
+//looping to add animation to main letter
+for(let i=0; i<alternateLetter.length; i++) {
+    alternateLetter[i].addEventListener('mouseenter', () => {
+        alternateLetter[i].style.animation = `alternateLetterAnimationIn 0.5s forwards`;
+        mainLetter[i].style.animation = `mainLetterAnimationIn 0.5s forwards`;
+    });
+    alternateLetter[i].addEventListener('mouseleave', () => {
+        alternateLetter[i].style.animation = `alternateLetterAnimationOut 0.5s`;
+        mainLetter[i].style.animation = `mainLetterAnimationOut 0.5s`;
     });
 }

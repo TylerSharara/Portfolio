@@ -1,8 +1,13 @@
+/*
+ font-family: 'Roboto', sans-serif;
+ font-family: 'Nunito', sans-serif;
+ font-family: 'Great Vibes', cursive;
+ font-family: 'Krub', sans-serif;
+*/
+
 root {
     font-family: 'Roboto', sans-serif;
 }
-
-
 
 header {
     margin: auto;
@@ -19,7 +24,7 @@ header {
 }
 
 html {
-    background-color: white;
+    background-color: #151515;
 }
 
 nav {
@@ -69,7 +74,7 @@ nav ul li a:before {
 }
 
 nav ul li a:hover {
-    color: #e66d22;
+    color: #14ffec;
 }
 
 nav.stroke ul li a:hover:after {
@@ -117,6 +122,7 @@ nav.fill ul li a:hover:after {
 .video-wrapper video {
     min-width: 100%;
     min-height: 100%;
+    z-index: -2;
 }
 
 .video-overlay {
@@ -134,50 +140,118 @@ nav.fill ul li a:hover:after {
 .overlay-content {
     position: absolute;
     left: 10%;
+    top: 15%;
     display: block;
     width: 70%;
     margin: auto;
 }
 
-.name {
-    color: white;
+.name-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.name-span {
+    display:inline-block;
+    padding:0;
+    margin: 0 -20px 0 -4px;
+    user-select: none !important;
+}
+
+.name-div {
+    font-size: 7em;
     font-family: 'Roboto', sans-serif;
-    font-size: calc(6vw + 0.5rem);
-    font-weight: 100;
-    margin: 0;
+    color: white;
+    position: relative;
+}
+
+span.space {
+    padding: 0 5px !important;
+    margin:0 1px;
+}
+
+span.letter:nth-child(even):hover {
+    animation: shake 0.85s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+span.letter:nth-child(odd):hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+
+.alternateLetter{
+    position: absolute;
+    left: 0;
+    z-index: 999;
+}
+
+.mainLetter{
+    z-index: 111;
 }
 
 .overlay-content p {
     font-family: 'Roboto', sans-serif;
     font-style: italic;
+    line-height: 1.15;
+    letter-spacing: 1px;
     font-size: calc(1.5vw + 0.5rem);
     color: white;
     display: block;
+    width: 75%;
 }
 
 .button {
-    background-color: #e66d22;
+    background-color: transparent;
     border-radius: 10px;
     color: white;
     padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
+    vertical-align: middle;
+    width: 150px;
+    height: 40px;
+    font-family: 'Nunito', sans-serif;
+    line-height: 40px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .button1 {
     color: white;
-    border: 2px solid #e66d22;
+    border: 2px solid #14ffec;
     border-radius: 10px;
 }
 
 .button1:hover {
     color: white;
-    background-color: transparent;
+    border: 2px solid #BB86FC;
 }
 
 .overlay-content h2 {
@@ -185,17 +259,10 @@ nav.fill ul li a:hover:after {
     margin: auto;
     font-size: 18px;
     color: white;
-    font-family: 'Oxanium';
     display: block;
     text-align: center;
     bottom: 0;
     left: 50%;
-}
-
-.arrow-container {
-    position: absolute;
-    width: 100%;
-    height: 65vh;
 }
 
 .arrow {
@@ -203,8 +270,70 @@ nav.fill ul li a:hover:after {
     position: absolute;
     color: white;
     opacity: 1;
-    top: 77%;
-    left: 50%
+    top: 90%;
+    left: 50%;
+    z-index: 999;
+}
+
+.about-container {
+    width: 100%;
+    height: 32vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-content {
+    width: 45%;
+    height: 100%;
+    text-align: center;
+}
+
+.about-content h1 {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: calc(2vw + 0.5rem);
+}
+
+.about-content p {
+    color: white;
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(1vw + 0.25rem);
+}
+
+.about-content a {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    width: 25%;
+    height: 50px;
+    background-color: transparent;
+    border: 2px solid #14ffec;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+}
+
+.about-content a:hover {
+    border-color: #BB86FC;
+    color: white;
+}
+
+.about-btn-container {
+    margin: auto;
+    width: 85%;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#avatar {
+    width: 300px;
+    height: 300px;
 }
 
 .project-outer {
@@ -212,6 +341,7 @@ nav.fill ul li a:hover:after {
     width: 80%;
     height: 200px;
     margin: auto;
+    border: solid white;
 }
 
 .project-inner {
@@ -223,11 +353,15 @@ nav.fill ul li a:hover:after {
 }
 
 .project-one {
-    background-color: #583B93;
+    background-color: #151515;
 }
 
 .project-two {
-    background-color: #581845;
+    background-color: #151515;
+}
+
+.project-three {
+    background-color: #151515;
 }
 
 .project-div {
@@ -246,12 +380,12 @@ nav.fill ul li a:hover:after {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #333;
+    /*background-color: #333;*/
     opacity: 50%;
     z-index: 100;
 }
 
-.project-content {
+.project-content-right {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -259,8 +393,22 @@ nav.fill ul li a:hover:after {
     height: 100%;
     width: 400px;
     right: 0;
-    background-color: #333;
+    background-color: white;
+    opacity: .94;
     transform: translateX(100%);
+}
+
+.project-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    height: 100%;
+    width: 400px;
+    left: 0;
+    background-color: white;
+    opacity: .94;
+    transform: translateX(-100%);
 }
 
 .btn-container {
@@ -271,9 +419,9 @@ nav.fill ul li a:hover:after {
     align-items: center;
 }
 
-.project-content p {
-    color: white;
-    width: 80%;
+.project-content-right p, .project-content-left p {
+    color: #151515;
+    width: 75%;
     height: 50%;
     font-size: 18px;
     margin: auto;
@@ -283,9 +431,13 @@ nav.fill ul li a:hover:after {
     align-items: center;
 }
 
+.project-content-right a, .project-content-left a {
+    text-align: center;
+    line-height: 35px;
+}
+
 .project-name {
     color: white;
-    font-family: "Great Vibes";
     font-size: 85px;
     font-weight: 200;
     position: absolute;
@@ -294,13 +446,27 @@ nav.fill ul li a:hover:after {
     z-index: 999;
 }
 
+#project-name-one {
+    font-family: 'Great Vibes', cursive;
+}
+
+#project-name-two {
+    font-family: 'Krub', sans-serif;
+    font-weight: 200;
+}
+
+#project-name-three {
+    font-family: 'Playfair Display', serif;
+
+}
+
 .project-btn {
     width: 30%;
     height: 35px;
     font-family: 'Playfair Display', serif;
     background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    border: 2px solid #151515;
+    color: #151515;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
@@ -310,12 +476,12 @@ nav.fill ul li a:hover:after {
 }
 
 .project-btn:hover {
-    background-color: white;
-    color: #333;
+    background-color: #151515;
+    color: white;
 }
 
 .num-left {
-    color: #e66d22;
+    color: #14ffec;
     position: absolute;
     font-size: 64px;
     bottom: 115px;
@@ -325,7 +491,7 @@ nav.fill ul li a:hover:after {
 }
 
 .num-right {
-    color: #e66d22;
+    color: #14ffec;
     position: absolute;
     font-size: 64px;
     bottom: 115px;
@@ -404,71 +570,91 @@ footer {
     }
 }
 
-@keyframes svg-animation {
+@keyframes projectContentSlideIn2 {
+    from{
+        transform: translateX(-100%);
+        z-index: 999;
+    }
     to{
-        stroke-dashoffset: 0;
+        transform: translateX(0%);
+        z-index: 999;
     }
 }
 
-#svg-name path:nth-child(1){
-    stroke-dasharray: 242.06243896484375px;
-    stroke-dashoffset: 242.06243896484375px;
-    animation: svg-animation 2s ease forwards;
+@keyframes projectContentSlideOut2 {
+    from{
+        transform: translateX(0%);
+        z-index: 999;
+    }
+    to{
+        transform: translateX(-100%);
+        z-index: 999;
+    }
 }
-#svg-name path:nth-child(2){
-    stroke-dasharray: 269.8515319824219px;
-    stroke-dashoffset: 269.8515319824219px;
-    animation: svg-animation 2s ease forwards 0.2s;
+
+@keyframes shake {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0) rotate(7deg);
+    }
+
+    20%, 80% {
+        transform: translate3d(1px, 0, 0) rotate(-7deg);
+    }
+
+    30%, 50%, 70% {
+        transform: translate3d(-2px, 0, 0) rotate(7deg);
+    }
+
+    40%, 60% {
+        transform: translate3d(2px, 0, 0) rotate(-7deg);
+    }
 }
-#svg-name path:nth-child(3){
-    stroke-dasharray: 161.3419952392578px;
-    stroke-dashoffset: 161.3419952392578px;
-    animation: svg-animation 2s ease forwards 0.4s;
+
+@keyframes alternateLetterAnimationIn {
+    from{
+        transform: translateX(0px) translateY(0px);
+        color: white;
+    }
+    to{
+        transform: translateX(3px) translateY(3px);
+        color: #14ffec;
+    }
 }
-#svg-name path:nth-child(4){
-    stroke-dasharray: 291.7459716796875px;
-    stroke-dashoffset: 291.7459716796875px;
-    animation: svg-animation 2s ease forwards 0.6s;
+
+@keyframes alternateLetterAnimationOut {
+    from{
+        transform: translateX(3px) translateY(3px);
+        color: #14ffec;
+    }
+    to{
+        transform: translateX(0px) translateY(0px);
+        color: white;
+    }
 }
-#svg-name path:nth-child(5){
-    stroke-dasharray: 155.13096618652344px;
-    stroke-dashoffset: 155.13096618652344px;
-    animation: svg-animation 2s ease forwards 0.8s;
+
+@keyframes mainLetterAnimationIn {
+    from{
+        transform: translateX(0px) translateY(0px);
+        color: white;
+    }
+    to{
+        transform: translateX(-3px) translateY(-3px);
+        filter: blur(3px);
+        color: #BB86FC;
+    }
 }
-#svg-name path:nth-child(6){
-    stroke-dasharray: 355.6005859375px;
-    stroke-dashoffset: 355.6005859375px;
-    animation: svg-animation 2s ease forwards 1.0s;
-}
-#svg-name path:nth-child(7){
-    stroke-dasharray: 306.37860107421875px;
-    stroke-dashoffset: 306.37860107421875px;
-    animation: svg-animation 2s ease forwards 1.2s;
-}
-#svg-name path:nth-child(8){
-    stroke-dasharray: 301.05413818359375px;
-    stroke-dashoffset: 301.05413818359375px;
-    animation: svg-animation 2s ease forwards 1.4s;
-}
-#svg-name path:nth-child(9){
-    stroke-dasharray: 155.13302612304688px;
-    stroke-dashoffset: 155.13302612304688px;
-    animation: svg-animation 2s ease forwards 1.6s;
-}
-#svg-name path:nth-child(10){
-    stroke-dasharray: 301.0555419921875px;
-    stroke-dashoffset: 301.0555419921875px;
-    animation: svg-animation 2s ease forwards 1.8s;
-}
-#svg-name path:nth-child(11){
-    stroke-dasharray: 155.1341094970703px;
-    stroke-dashoffset: 155.1341094970703px;
-    animation: svg-animation 2s ease forwards 2.0s;
-}
-#svg-name path:nth-child(12){
-    stroke-dasharray: 301.0543518066406px;
-    stroke-dashoffset: 301.0543518066406px;
-    animation: svg-animation 2s ease forwards 2.2s;
+
+@keyframes mainLetterAnimationOut {
+    from{
+        transform: translateX(-3px) translateY(-3px);
+        filter: blur(3px);
+        color: #BB86FC;
+    }
+    to{
+        transform: translateX(0px) translateY(0px);
+        filter: blur(0px);
+        color: white;
+    }
 }
 
 @media only screen and (max-width: 600px) {
