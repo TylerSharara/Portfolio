@@ -355,16 +355,16 @@ span.letter:nth-child(odd):hover {
 .horizontal-divider {
     width: 250px;
     height: 3px;
-    background: linear-gradient(-45deg, #14ffec, #BB86FC);
-    background-size: 400% 400%;
-    animation: gradient 5s ease infinite;
+    background-color: #BB86FC;
     margin: 0 30px;
 }
 
 .horizontal-divider-full {
     width: 70%;
     height: 3px;
-    background-color: #BB86FC;
+    background: linear-gradient(-45deg, #14ffec, #BB86FC);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
     margin: 0 30px;
 }
 
@@ -560,15 +560,18 @@ span.letter:nth-child(odd):hover {
 }
 
 .call-to-action {
-    position: absolute;
-    top: 10%;
+    position: relative;
+    transform: translateY(125px);
+    width: 70%;
+    margin: auto;
     z-index: 999;
+    border-radius: 15px;
     display: flex;
-    border-radius: 10px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #151515;
+    padding: 25px;
 }
 
 .fade-in {
@@ -580,7 +583,36 @@ span.letter:nth-child(odd):hover {
     opacity: 1;
 }
 
+.gradient-border {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    --borderWidth: 3px;
+    background: #151515;
+    border-radius: 10px;
+    padding: 25px;
+}
+.gradient-border:after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: calc(100% + var(--borderWidth) * 2);
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(-45deg, #14ffec, #BB86FC);
+    border-radius: calc(3.5 * var(--borderWidth));
+    z-index: -1;
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+}
+
 footer {
+    z-index: -999;
     background: linear-gradient(-45deg, #14ffec, #BB86FC);
     background-size: 400% 400%;
     animation: gradient 10s ease infinite;
@@ -588,9 +620,9 @@ footer {
     width: 100vw;
     height: 30vh;
     font-family: 'Nunito', sans-serif;
-    text-align: center;
-    color: white;
-    overflow: hidden;
+    text-align: left;
+    color: #151515;
+
 }
 
 /* Scroll Bar -------------------------------*/

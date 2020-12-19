@@ -36,7 +36,7 @@
                         <ul>
                             <li><a href="index.php">Home</a></li>
                             <li><a href="#project-start">Projects</a></li>
-                            <li><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTNHjkMDTvrxqNQPVXDRKVhQjfBVHpVtCbhTqgtbPJkGFBQhfCMqtwmMTjJlgcBXLXgpLV">Contact</a></li>
+                            <li><a href="#contact">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -149,18 +149,19 @@
                 </div>
             </div>
         </div>
-        <div class="call-to-action-container">
-            <div class="call-to-action">
-                <h1 id="project-start" class="project-start">Need a Website or Looking to Hire?</h1>
-                <br>
-                <div class="horizontal-divider-full"></div>
-                <br><br>
-                <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJTNHjkMDTvrxqNQPVXDRKVhQjfBVHpVtCbhTqgtbPJkGFBQhfCMqtwmMTjJlgcBXLXgpLV" target="_blank" class="button button1"><span>Get in Touch </span></a>
-            </div>
+        <br>
+        <div class="call-to-action-container" id="contact">
+                <div class="gradient-border">
+                    <h1 id="project-start" class="project-start">Need a Website or Looking to Hire?</h1>
+                    <br>
+                    <div class="horizontal-divider-full"></div>
+                    <br><br>
+                    <a href="mailto:tylersharara@gmail.com" target="_blank" class="button button1"><span>Get in Touch </span></a>
+                </div>
         </div>
+        <footer>
+            Copyright Tyler Sharara 2020
+        </footer>
     </body>
-    <footer>
-
-    </footer>
     <script src="scripts/script.js"></script>
 </html>
