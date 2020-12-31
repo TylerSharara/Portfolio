@@ -14,9 +14,10 @@
 
         Final Project CIS-126-01
         -->
-        <title> TSharara Portfolio </title>
+        <title>Tyler Sharara | Portfolio</title>
         <meta charset="UTF-8">
         <meta name="Final Project CIS-126-01" content="Home page for a mock business">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
@@ -81,8 +82,9 @@
         <div class="about-container">
             <div class="about-content">
                 <h1>Hi, I'm Tyler. Nice to meet you.</h1>
-                <p>I am a full stack web developer from Dearborn, Michigan with a passion for creating beautiful & responsive websites.
-                    My goal is to never stop learning, and continue sharpening my skills one website at a time. </p>
+                <img src="media/Tyler-Avatar.webp" id="avatar-mobil" alt="Tyler Sharara Avatar">
+                <p>I am a full stack web developer from Dearborn, Michigan with a passion for creating interactive & responsive websites.
+                    My goal is to continue sharpening my skills one day at a time, and hopefully make a positive impact while doing it.</p>
                 <div class="about-btn-container">
                     <a type="button" href="https://www.linkedin.com/in/tyler-sharara-40485268/" class="project-btn">LinkedIn</a>
                     <a type="button" href="https://github.com/TylerSharara" class="project-btn">Github</a>
@@ -92,15 +94,15 @@
                     -->
                 </div>
             </div>
-            <img src="media/Tyler-Avatar.webp" id="avatar" alt="Tyler Sharara Avatar">
+            <img src="media/Tyler-Avatar.webp" id="avatar-desk" alt="Tyler Sharara Avatar">
         </div>
         <br><br><br><br><br>
 
         <!-- Projects start here -->
         <div class="project-header">
-            <div class="horizontal-divider"></div>
-            <h1 id="project-start" class="project-start">Projects</h1>
-            <div class="horizontal-divider"></div>
+            <div class="horizontal-divider fade-in"></div>
+            <h1 id="project-start" class="project-start fade-in">Projects</h1>
+            <div class="horizontal-divider fade-in"></div>
         </div>
         <br><br>
         <div class="project-outer fade-in">
@@ -150,6 +152,26 @@
             </div>
         </div>
         <br>
+        <!--
+        <div class="project-header">
+            <div class="horizontal-divider fade-in"></div>
+            <h1 id="project-start" class="project-start fade-in">Skills</h1>
+            <div class="horizontal-divider fade-in"></div>
+        </div>
+        <br><br>
+        <div id="skill-container">
+            <div class="skills">
+
+            </div>
+            <div class="skills" id="skill2">
+
+            </div>
+            <div class="skills" id="skill3">
+
+            </div>
+        </div>
+        -->
+        <br>
         <div class="call-to-action-container" id="contact">
                 <div class="gradient-border">
                     <h1 id="project-start" class="project-start">Need a Website or Looking to Hire?</h1>
@@ -158,9 +180,13 @@
                     <br><br>
                     <a href="mailto:tylersharara@gmail.com" target="_blank" class="button button1"><span>Get in Touch </span></a>
                 </div>
+            <ul class="social-icons">
+                <li><a href="https://github.com/TylerSharara"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/tyler-sharara-40485268/"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
         </div>
         <footer>
-            Copyright Tyler Sharara 2020
+            <p>Copyright Tyler Sharara 2020</p>
         </footer>
     </body>
     <script src="scripts/script.js"></script>
