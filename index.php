@@ -16,6 +16,7 @@
         -->
         <title>Tyler Sharara | Portfolio</title>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <meta name="Final Project CIS-126-01" content="Home page for a mock business">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -73,7 +74,7 @@
                         <span class="letter name-span">a</span>
                     </div>
                 </div>
-                <p>Designer, Full Stack Developer & Lover of all things chocolate flavored.</p>
+                <p>Designer & Full Stack Developer.</p>
                 <a href="media/TylerSharara-Resume.pdf" download class="button button1"><span>Resume </span></a>
             </div>
         </div>
@@ -83,7 +84,7 @@
             <div class="about-content">
                 <h1>Hi, I'm Tyler. Nice to meet you.</h1>
                 <img src="media/Tyler-Avatar.webp" id="avatar-mobil" alt="Tyler Sharara Avatar">
-                <p>I am a full stack web developer from Dearborn, Michigan with a passion for creating interactive & responsive websites.
+                <p>I am a full stack web developer located in Dearborn, Michigan with a passion for creating interactive & responsive websites.
                     My goal is to continue sharpening my skills one day at a time, and hopefully make a positive impact while doing it.</p>
                 <div class="about-btn-container">
                     <a type="button" href="https://www.linkedin.com/in/tyler-sharara-40485268/" class="project-btn">LinkedIn</a>
@@ -141,7 +142,7 @@
             <h1 class="num-left">03</h1>
             <div class="project-inner fade-in">
                 <div class="project-div project-three">
-                    <h1 class="project-name" id="project-name-three">SlightlyToxic</h1>
+                    <h1 class="project-name" id="project-name-three">Slightly Toxic</h1>
                     <div class="project-content-right project-content-three">
                         <p> SlightlyToxic is a portfolio for a local makeup artist. This is a WordPress website built with Elementor and Astra</p>
                         <div class="btn-container">
@@ -151,7 +152,6 @@
                 </div>
             </div>
         </div>
-        <br>
         <!--
         <div class="project-header">
             <div class="horizontal-divider fade-in"></div>
@@ -171,7 +171,6 @@
             </div>
         </div>
         -->
-        <br>
         <div class="call-to-action-container" id="contact">
                 <div class="gradient-border">
                     <h1 id="project-start" class="project-start">Need a Website or Looking to Hire?</h1>
